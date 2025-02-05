@@ -14,7 +14,7 @@
         inherit root;
         fileset = lib.fileset.unions [
           (root + /src)
-          (root + /haskell-template.cabal)
+          (root + /grapesy-ghc92-nix.cabal)
           (root + /LICENSE)
           (root + /README.md)
         ];
@@ -35,7 +35,7 @@
 
       # Add your package overrides here
       settings = {
-        haskell-template = {
+        grapesy-ghc92-nix = {
           stan = true;
           # haddock = false;
         };
@@ -56,7 +56,7 @@
     };
 
     # Default package & app.
-    packages.default = self'.packages.haskell-template;
-    apps.default = self'.apps.haskell-template;
+    packages.default = self'.packages.grapesy-ghc92-nix;
+    apps.default = self'.apps.grapesy-ghc92-nix;
   };
 }
