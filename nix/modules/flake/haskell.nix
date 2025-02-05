@@ -36,7 +36,6 @@
       # Add your package overrides here
       settings = {
         grapesy-ghc92-nix = {
-          stan = true;
           # haddock = false;
         };
         /*
