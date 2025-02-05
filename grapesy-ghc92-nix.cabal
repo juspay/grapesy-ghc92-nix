@@ -6,7 +6,6 @@ copyright:          2022 Sridhar Ratnakumar
 maintainer:         srid@srid.ca
 author:             Sridhar Ratnakumar
 category:           Web
-homepage:           https://srid.ca/grapesy-ghc92-nix
 
 -- TODO: Before hackage release.
 -- A short (one-line) description of the package.
@@ -28,11 +27,6 @@ common shared
     -Wmissing-deriving-strategies -Wunused-foralls -Wunused-foralls
     -fprint-explicit-foralls -fprint-explicit-kinds
 
-  mixins:
-    base hiding (Prelude),
-    relude (Relude as Prelude, Relude.Container.One),
-    relude
-
   default-extensions:
     DataKinds
     DerivingStrategies
@@ -47,18 +41,11 @@ common shared
 
   build-depends:
     , aeson
-    , async
-    , base          >=4   && <5
-    , data-default
+    , base
     , directory
     , filepath
-    , mtl
-    , optics-core
-    , profunctors
-    , relude        >=1.0
-    , shower
+    , text
     , time
-    , with-utf8
 
   hs-source-dirs:     src
   default-language:   GHC2021
